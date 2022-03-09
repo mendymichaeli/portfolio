@@ -1,5 +1,8 @@
 @import "../../global.scss";
 .menu{
+    @include mobile{
+        height: calc(100vh - 140px);
+    }
     width: 400px;
     height: 100vh;
     background:linear-gradient(165deg, $mainColor 50%,#8088e0);
@@ -12,6 +15,10 @@
     align-items: center;
     justify-content: center;
     transition: all 1s ease;
+    @include mobile{
+        height: calc(100vh - 140px);
+        top:70px;
+    }
 
         
 

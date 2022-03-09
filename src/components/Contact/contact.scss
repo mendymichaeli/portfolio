@@ -55,7 +55,7 @@
         .itemContainer{
             display: flex;
             align-items: center;
-            margin: 4px 0px 0px 50px;
+            margin: 5px 0px 0px 50px;
 
             .icon{
                 font-size: 30px;
@@ -161,7 +161,7 @@
             @include mobile{
                 position: absolute;
                 width: 100vw;
-                height: 80px;
+                height: 40px;
                 border-radius: 0px;
                 font-size: 20px;
                 margin:30px 0px 0px 0px;
