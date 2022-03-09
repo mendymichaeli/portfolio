@@ -1,0 +1,10 @@
+$mainColor: rgb(23, 1, 104); 
+$greenColor: #1E90FF; 
+
+$width:820px;
+
+@mixin mobile {
+    @media(max-width: #{$width}){
+        @content
+    }
+}
