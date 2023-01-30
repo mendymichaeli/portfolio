@@ -1,0 +1,61 @@
+@import "../../global.scss";
+.menu{
+    @include mobile{
+        height: calc(100vh - 140px);
+    }
+    width: 400px;
+    height: 100vh;
+    background:linear-gradient(165deg, $mainColor 50%,#8088e0);
+    position: fixed;
+    top: 0;
+    right: -400px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+    @include mobile{
+        height: calc(100vh - 140px);
+        top:70px;
+    }
+
+        
+
+    &.active{
+        right:0;
+        width: 100vw;
+        
+    }
+
+    ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 40px;
+        color:white;
+        width: 60%;
+        font-weight: 300;
+        
+
+        li{
+            margin-bottom: 25px;
+
+            a{
+                font-size: inherit;
+                color: inherit;
+                text-decoration: none;
+            }
+            &:hover{
+                font-weight: 500;
+            }
+        }
+    }
+}
+.copyRights{
+    font-size: 15px;
+    position: absolute;
+    align-self: center;
+    bottom: 5px;
+    color:white;
+}

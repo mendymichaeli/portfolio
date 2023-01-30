@@ -1,0 +1,111 @@
+@import "../../global.scss";
+
+.protfolio{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    transition: all 1s;
+    h1{
+       font-size: 50px;
+       @include mobile{
+           font-size: 30px;
+       }
+    }
+
+    ul{
+        display: flex;
+        list-style: none;
+        @include mobile{
+            margin: 10px 0;
+            font-size: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+           
+        }
+    }
+    .container{
+        width: 70%;
+        height: 70%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        transition: all 1s;
+        .item{
+            width: 30%;
+            height: 35%;
+            border-radius:10px;
+            margin: 10px 20px;
+            box-shadow: rgba(28, 28, 124, 0.3) 0px 50px 100px -20px,
+                        rgba(3, 25, 100, 0.5) 0px 30px 60px -30px,
+                        rgba(8, 30, 53, 0.2) 0px -2px 6px 0px inset;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            transition: all 1s ease;
+            cursor: pointer;
+            @include mobile{
+                width: 250px;
+                height: 110px;
+                box-shadow: rgba(28, 28, 124, 0.3) 0px 25px 25px -10px,
+                rgba(3, 25, 100, 0.5) 0px 15px 30px -15px,
+                rgba(8, 30, 53, 0.2) 0px -1px 30px 0px inset;
+            }
+
+            h3{
+                position:absolute;
+                font-size: 30px;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                @include mobile{
+                    filter: drop-shadow(16px 16px 10px $mainColor);
+                    color: $mainColor;
+                    z-index: 1;
+                }
+    
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1;
+                @include mobile{
+                    opacity: 0.5;
+                   
+                }
+            }
+            &:hover{
+                background-color: $mainColor;
+                img{
+                    opacity: 0.2;
+                    z-index: 0;
+                }
+            }
+        }
+        
+
+    }
+}
+.alert-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  .alert-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 300ms, transform 300ms;
+  }
+  .alert-exit {
+    opacity: 1;
+  }
+  .alert-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+  }
+  

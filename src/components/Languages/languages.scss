@@ -1,0 +1,107 @@
+@import "../../global.scss";
+
+
+.Languages{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @include mobile{
+        justify-content: space-around;   
+    }
+
+    h1{
+        font-size: 60px;
+        @include mobile{
+            font-size: 1.5em;
+        }
+    }
+
+    .container{
+        width: 100%;
+        height: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 5px;
+        @include mobile{
+            flex-direction: column;
+            height: 95%;
+        }
+        
+        .card{
+            width: 260px;
+            height: 50%;
+            border-radius: 20px;
+            box-shadow: rgba(73, 73, 146, 0.30) 0px 50px 100px -20px,
+                        rgba(15, 50, 167, 0.5) 0px 30px 60px -30px,
+                        rgba(21, 57, 94, 0.20) 0px -2px 6px 0px inset;
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+            padding: 20px;
+            margin: 10px;
+            transition: all 0.75s ease;
+            height: 70%;
+            background-position: 'center';
+            background-repeat: 'no-repeat';
+            background-size: 'cover';
+            @include mobile{
+                height: 170px;
+                width: 240px;
+                margin: 10px;
+            }
+            &:hover{
+                transform: scale(1.05);
+            }
+
+            .top{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin-top: 30px;
+                padding: 25px;
+                text-decoration: underline;
+                font-size: 1.5em;
+                @include mobile{
+                    margin: 0px;
+                font-size: .75em;
+                 padding: 5px;
+                }
+            }
+            .bottom{
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 1.5em;
+                transition: all 0.75s ease;
+                
+                ul{
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding: 0;
+                    margin: 10px 0px 5px 0px;
+                    @include mobile{ 
+                        flex-direction:unset;
+                        flex-wrap: wrap;  
+                        margin: 0;       
+                       li{
+                        background-color: rgba(78, 165, 236, 0.486);
+                        border-radius: 15px;
+                        margin: 2px 2px 0px 0px;
+                        padding: 2px;
+                        font-size: 0.5em;
+                        font-weight: 300;
+                        }
+                    }
+                   
+                }
+            }
+
+        }
+    }
+}
